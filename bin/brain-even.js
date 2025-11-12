@@ -1,18 +1,13 @@
-import readlineSync from "readline-sync";
+#!/usr/bin/env node
+import { isEven, generateNumber } from '../src/helpers/helpers.js'
+import runGame from '../src/runHelp.js'
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".')
-function guessNumber(){
-let randomNum=Math.floor(Math.random()*100);
-const answer = readlineSync.question(`Question: ${randomNum} \nYour answer: `);
-let correctAnswer = randomNum % 2 ===0 ? "yes":"no";
-if (answer.toLowerCase()===correctAnswer){
-    console.log("Correct!");
-} else {
-    console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again!`
-    );
-};
+const brainEven = () => {
+  const num = generateNumber();
+  const correctAnswer = (isEven(num) ? 'yes' : 'no');
+  const question = `${num}`;
+  return [question, correctAnswer];
 }
-guessNumber();
-guessNumber();
-guessNumber();
+
+const description = `Answer "yes" if the number is even, otherwise answer "no".`;
+runGame(description, brainEven);
