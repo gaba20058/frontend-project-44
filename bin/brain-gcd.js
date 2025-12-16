@@ -13,4 +13,4 @@ const brainGCD=()=>{
 };
 
 const description = "Find the greatest common divisor of given numbers.";
-runGame(description,brainGCD)
+runGame(description,brainGCD);
