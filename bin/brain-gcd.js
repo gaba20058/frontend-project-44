@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-import {generateNumber, findGCD} from "../src/helpers/helpers.js";
-import runGame from '../src/runHelp.js';
+import { findGCD, generateNumber } from '../src/helpers/helpers.js'
+import runGame from '../src/runHelp.js'
 
-const brainGCD=()=>{
-    const a=generateNumber();
-    const b=generateNumber();
-    const question=`${a} ${b}`;
-    const correctAnswer=findGCD(a,b);
+const brainGcd = () => {
+  const num1 = generateNumber()
+  const num2 = generateNumber()
+  const correctAnswer = String(findGCD(num1, num2))
+  const question = `${num1} ${num2}`
 
-    return [question,correctAnswer];
-};
+  return [question, correctAnswer]
+}
 
-const description = "Find the greatest common divisor of given numbers.";
-runGame(description,brainGCD);
+const description = 'Find the greatest common divisor of given numbers.'
+runGame(description, brainGcd)

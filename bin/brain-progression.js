@@ -13,4 +13,4 @@ const brainProgression = () => {
 }
 
 const description = 'What number is missing in the progression?'
-runGame(description, brainProgression);
+runGame(description, brainProgression)

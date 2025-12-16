@@ -1,5 +1,7 @@
-import readlineSync from 'readline-sync';
+#!/usr/bin/env node
 
-export default function welcomeUser(){
-    return readlineSync.question("May I have your name? ")
-}
+import readlineSync from 'readline-sync'
+
+console.log('Welcome to the Brain Games!')
+const name = readlineSync.question('May I have your name? ')
+console.log(`Hello, ${name}!`)
