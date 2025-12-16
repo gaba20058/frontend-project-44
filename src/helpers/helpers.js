@@ -66,7 +66,7 @@ export const hideElement =(progression,hiddenIndex)=>{
 export const generateProgressionParams=()=>{
     const start=Math.floor(Math.random()*50)+1;
     const step=Math.floor(Math.random()*10)+1;
-    const length=Math.floor(Math.random()*6)+1;
+    const length=Math.floor(Math.random()*6)+5;
     const hiddenIndex=Math.floor(Math.random()*length);
     
     return {start,step,length,hiddenIndex};
